@@ -1,0 +1,116 @@
+.mainContainer{
+    
+    background-color: rgb(233, 230, 230);
+
+}
+.titleDiv{
+    background-color: rgb(233, 230, 230);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+.title{
+    
+    font-size: 60px;
+    color: rgb(95, 121, 252);
+    text-shadow: 2px 15px 7px rgba(128, 0, 0, 0.33);
+    margin: 30px 2px;
+    
+  
+}
+
+.subDivConatiner{
+    display: block;
+    width: 100%;
+}
+.projectDiv{
+    display: flex;
+    justify-content: space-around;
+   margin: 15px;
+}
+.textWithButton{
+    display: block;
+    margin: 10px;
+    justify-content: space-between;
+    line-height: 2;
+  
+}
+
+
+.images{
+    height: 250px;
+    width: 450px;
+    border-radius: 5px;
+    box-shadow: 5px 4px  #a8a7a7;
+}
+
+.images:hover{
+    box-shadow: 2px 4px  #b46c6c;
+}
+
+.proName{
+font-size: 30px;
+color: rgb(13, 80, 226);
+}
+
+.discript{
+font-size: 25px;
+word-wrap: break-word;
+color: rgb(105, 106, 109);
+}
+.mybtn1{
+font-size: 20px;
+padding: 2px 5px;
+background-color: rgb(233, 230, 230);
+color: rgb(20, 1, 1);
+border: none;
+}
+.mybtn1:hover{
+    cursor: pointer;
+    border:2px solid rgb(10, 10, 10);
+    }
+
+.mybtn2{
+    font-size: 20px;
+padding: 2px 5px;
+}
+.mybtn2:hover{
+   background-color: black;
+   color: white;
+}
+
+
+/* Styles for devices with a maximum width of 768px (such as mobile phones) */
+@media only screen and (max-width: 768px) {
+    .mainContainer{
+        background-color: rgb(233, 230, 230);
+    }
+    
+.subDivConatiner{
+    display: block;
+    width: 100%;
+}
+.projectDiv{
+    display: block;
+    justify-content: space-around;
+   margin: 15px;
+   background-color: rgb(253, 253, 252);
+}
+
+.images{
+    height: 250px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 5px 4px  #a8a7a7;
+}
+
+
+}
+  
+  /* Styles for devices with a minimum width of 769px (such as laptops) */
+  @media only screen and (min-width: 769px) {
+    /* CSS styles here */
+  }
+  

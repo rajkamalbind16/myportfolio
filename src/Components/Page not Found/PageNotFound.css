@@ -1,0 +1,16 @@
+.Div404{
+    background-image: url('./pics/background.jpg');
+    object-fit: contain;
+    height: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+
+}
+.spans{
+    font-size: 350px;
+    color: rgb(251, 248, 243);
+    
+}

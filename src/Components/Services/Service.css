@@ -1,0 +1,219 @@
+.containerService{
+    background-color: rgb(233, 230, 230);
+    height: 790px;
+
+
+}
+#titleService{ 
+    height: 120px; 
+    width: 100%; 
+    
+}
+
+
+#titles{
+    font-size: 65px;
+    text-align: center;
+    text-shadow: #FFFCA8 2px 2px 0px, #9C9C9C 4px 4px 0px, 3px 25px 4px rgba(206,89,55,0.88);
+}
+    
+.servicesGrid{
+    width: 45%;
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 5px;
+  align-items: center;
+  margin: auto;
+  background-color: rgb(233, 230, 230);
+}
+
+.gridItems{
+    padding: 20px;
+    text-align: center;
+    
+}
+
+#experi{
+    width: 180px;
+    height: 260px;
+    grid-row: span 2;
+    background-color: rgb(252, 247, 247);
+    border-radius: 20px 0 20px 0;
+
+   
+}
+#web{
+    height: 100px;
+    width: 180px;
+    margin: 5px;
+    background-color: rgb(252, 247, 247);
+    border-radius: 20px 0 20px 0;
+}
+#android{
+    height: 100px;
+    width: 180px;
+    margin: 5px;
+    background-color: rgb(252, 247, 247);
+    border-radius: 20px 0 20px 0;
+
+}
+#desktop{
+    height: 100px;
+    width: 180px;
+    margin: 5px;
+    background-color: rgb(252, 247, 247);
+    border-radius: 20px 0 20px 0;
+
+}
+#ios{
+    height: 100px;
+    width: 180px;
+    margin: 5px;
+    background-color: rgb(252, 247, 247);
+    border-radius: 20px 0 20px 0;
+
+}
+
+#experi1{
+   font-size: 75px;
+  
+}
+#web1{
+    height: 50px;
+    width: 50px;
+
+}
+#anroid1{
+    height: 50px;
+    width: 50px;
+}
+#desktop1{
+    height: 50px;
+    width: 50px;
+
+}
+#ios1{
+    height: 50px;
+    width: 50px;
+
+}
+
+
+/* --------------for swiper------------ */
+
+
+
+.mySwipeImgSwiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .swiperSLIDER {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .sliderImg {
+    display: block;
+    width: 100%;
+  }
+  
+
+
+
+
+
+  /* Styles for devices with a maximum width of 768px (such as mobile phones) */
+@media only screen and (max-width: 768px) {
+    .containerService{
+        background-color: rgb(233, 230, 230);
+        height: 900px;
+    
+    
+    }
+
+    .servicesGrid{
+        width: 100%;
+        display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-gap: 2px;
+      margin: 3px;
+      background-color: rgb(233, 230, 230);
+
+    }
+
+    .gridItems{
+    padding: 20px;
+    
+}
+
+#experi{
+    width: 140px;
+    height: 250px;
+    grid-row: span 2;
+    background-color: rgb(252, 247, 247);
+
+   
+}
+#web{
+    height: 100px;
+    width: 140px;
+    margin: 1px;
+    background-color: rgb(252, 247, 247);
+}
+#android{
+    height: 100px;
+    width: 140px;
+    margin: 1px;
+    background-color: rgb(252, 247, 247);
+
+}
+#desktop{
+    height: 100px;
+    width: 140px;
+    margin: 1px;
+    background-color: rgb(252, 247, 247);
+
+}
+#ios{
+    height: 100px;
+    width: 140px;
+    margin: 1px;
+    background-color: rgb(252, 247, 247);
+
+}
+
+.mySwipeImgSwiper {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .swiperSLIDER {
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 300px;
+    align-items: center;
+  }
+  
+  .sliderImg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+    
+
+
+}
+  
+  /* Styles for devices with a minimum width of 769px (such as laptops) */
+  @media only screen and (min-width: 769px) {
+    /* CSS styles here */
+  }
+  
