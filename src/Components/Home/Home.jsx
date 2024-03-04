@@ -3,7 +3,7 @@ import './Home.css';
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { HiDownload } from 'react-icons/hi';
-import {FaLinkedin,FaGithub,FaBlogger,FaFacebookSquare,FaWhatsapp,FaTwitter,FaSkype} from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaBlogger, FaFacebookSquare, FaWhatsapp, FaTwitter, FaSkype } from 'react-icons/fa';
 import { BsFillFileEarmarkCodeFill } from 'react-icons/bs';
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,7 +20,7 @@ import pic2 from './photo/pic2.jpg';
 import pic3 from './photo/pic3.jpg';
 import pic4 from './photo/pic4.jpg';
 
-import { Autoplay, Pagination, Navigation ,FreeMode} from "swiper";
+import { Autoplay, Pagination, Navigation, FreeMode } from "swiper";
 
 import html5 from './photo/html5.svg';
 import css from './photo/css.svg';
@@ -28,9 +28,9 @@ import javascript from './photo/javascript.svg';
 import bootstrap from './photo/bootstrap.svg';
 import react from './photo/react.svg';
 import nodejs from './photo/nodejs.svg';
+// import cv from '../../../public/mycv.pdf'
 
 
- 
 
 const Home = () => {
 
@@ -94,6 +94,17 @@ const Home = () => {
     return () => clearTimeout(timer);
   });
 
+  // Download resume from public folder
+  const RESUME_PDF_PATH = window.location.href + "mycv.pdf"; // To do: check if this works on production
+  const downLoadResume = (url) => {
+    const fileName = url.split('/').pop();
+    const aTag = document.createElement('a');
+    aTag.href = url;
+    aTag.setAttribute('download', fileName);
+    document.body.appendChild(aTag);
+    aTag.click();
+    aTag.remove();
+  };
 
   // ----------------text animate-------------
 
@@ -101,99 +112,107 @@ const Home = () => {
     <>
       <div className='homeContainerBanner'>
 
-              <div className='homeContainer'>
-                <div className='socialIconsDiv'>
-                  <li><a href="https://www.linkedin.com/in/rajkamalbind16/" target={'_blank'}><FaLinkedin className='socialIconsLink'/></a></li>
+        <div className='homeContainer'>
+          <div className='socialIconsDiv'>
+            <li><a href="https://www.linkedin.com/in/rajkamalbind16/" target={'_blank'}><FaLinkedin className='socialIconsLink' /></a></li>
 
-                  <li><a href='https://github.com/rajkamalbind16' target={'_blank'}><FaGithub className='socialIconsLink'/></a></li>
+            <li><a href='https://github.com/rajkamalbind16' target={'_blank'}><FaGithub className='socialIconsLink' /></a></li>
 
-                  <li><a href="https://www.facebook.com/rajkamaljennu" target={'_blank'}><FaFacebookSquare className='socialIconsLink'/></a></li>
+            <li><a href="https://www.facebook.com/rajkamaljennu" target={'_blank'}><FaFacebookSquare className='socialIconsLink' /></a></li>
 
-                  <li><a href="https://wa.me/qr/AZAEPCAUUO3VD1" target={'_blank'}><FaWhatsapp className='socialIconsLink'/></a></li>
+            <li><a href="https://wa.me/qr/AZAEPCAUUO3VD1" target={'_blank'}><FaWhatsapp className='socialIconsLink' /></a></li>
 
-                  <li><a href="https://join.skype.com/invite/kuqasFW69KpJ" target={'_blank'}><FaSkype className='socialIconsLink'/></a></li>
+            <li><a href="https://join.skype.com/invite/kuqasFW69KpJ" target={'_blank'}><FaSkype className='socialIconsLink' /></a></li>
 
-                  <li><a href="https://www.blogger.com/blog/posts/1926558672308713187?bpli=1&pli=1" target={'_blank'}><FaBlogger className='socialIconsLink'/></a></li>
+            <li><a href="https://www.blogger.com/blog/posts/1926558672308713187?bpli=1&pli=1" target={'_blank'}><FaBlogger className='socialIconsLink' /></a></li>
 
-                </div>
+          </div>
 
-                <div className='HomeTextDiv'>
-                  <span className='textss'>Hello &#128525; <br />I am Raj Kamal Bind</span><br />
-                  <motion.h1
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
-                    id="texts"
-                  >
-                    <span className='HomeTextAnime'>{text}</span>
-                  </motion.h1>
+          <div className='HomeTextDiv'>
+            <span className='textss'>Hello &#128525; <br />I am Raj Kamal Bind</span><br />
+            <motion.h1
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              id="texts"
+            >
+              <span className='HomeTextAnime'>{text}</span>
+            </motion.h1>
 
-                </div>
-
-
+          </div>
 
 
-                <div className='homeCube'>
-                  <Swiper
-                    effect={"cube"}
-                    grabCursor={true}
-                    loop={true}
-                    cubeEffect={{
-                      shadow: true,
-                      slideShadows: true,
-                      shadowOffset: 20,
-                      shadowScale: 0.94,
-                    }}
-                    autoplay={{
-                      delay: 1500,
-                      disableOnInteraction: false,
-                    }}
-                    pagination={true}
-                    modules={[EffectCube,Autoplay]}
-                    className="mySwiper"
-                  >
-                    <SwiperSlide>
-                      <img src={pic2} />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img src={pic1} />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img src={pic3} />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img src={pic4} />
-                    </SwiperSlide>
-                  </Swiper>
-                </div>
-              </div><br/>
 
-              <div className='CounterBtnDiv'>
 
-                <div className='btnHome'>
-                  <button className='myBtn'> <a href="./photo/mycv.pdf" download id='myBtn'>Download Resume <HiDownload /></a></button>
-                  <button className='myBtn'><a href='https://github.com/rajkamalbind16' target={'_blank'} id='myBtn'>Projects <BsFillFileEarmarkCodeFill /></a></button>
-                </div>
+          <div className='homeCube'>
+            <Swiper
+              effect={"cube"}
+              grabCursor={true}
+              loop={true}
+              cubeEffect={{
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+              }}
+              autoplay={{
+                delay: 1500,
+                disableOnInteraction: false,
+              }}
+              pagination={true}
+              modules={[EffectCube, Autoplay]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <img src={pic2} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={pic1} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={pic3} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={pic4} />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </div><br />
 
-                <div className='counterHome'>
-                  <p className='myCounter'><span className='myCounterText'>{counter}+</span><br />Clients Worldwide</p>
-                  <p className='myCounter'><span className='myCounterText'>{counter2}+</span><br />Projects Done!</p>
-                </div>
-              </div>
+        <div className='CounterBtnDiv'>
 
-              
+          <div className='btnHome'>
+            <button className='myBtn'
+            >
+              <a
+                onClick={() => downLoadResume(RESUME_PDF_PATH)}
+                download id='myBtn'>
+                Download Resume
+                <HiDownload />
+              </a>
+            </button>
+            <button className='myBtn'><a href='https://github.com/rajkamalbind16' target={'_blank'} id='myBtn'>Projects <BsFillFileEarmarkCodeFill /></a></button>
+          </div>
+
+          <div className='counterHome'>
+            <p className='myCounter'><span className='myCounterText'>{counter}+</span><br />Clients Worldwide</p>
+            <p className='myCounter'><span className='myCounterText'>{counter2}+</span><br />Projects Done!</p>
+          </div>
+        </div>
+
+
 
 
 
       </div>
       <div className='SkillSliderDiv'>
-                 
-                <div><img src={html5} className='SkillSliders'/></div>
-                <div><img src={css} className='SkillSliders'/></div>
-                <div><img src={javascript} className='SkillSliders'/></div>
-                <div><img src={react} className='SkillSliders'/></div>
-                <div><img src={nodejs} className='SkillSliders'/></div>
-              </div> 
+
+        <div><img src={html5} className='SkillSliders' /></div>
+        <div><img src={css} className='SkillSliders' /></div>
+        <div><img src={javascript} className='SkillSliders' /></div>
+        <div><img src={react} className='SkillSliders' /></div>
+        <div><img src={nodejs} className='SkillSliders' /></div>
+      </div>
 
 
     </>
